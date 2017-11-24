@@ -3,11 +3,18 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    devtool: 'source-map',
+    entry: [
+        'webpack-hot-middleware/client',
+        './src/index.js'
+    ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
     module: {
         rules: [
             { 
@@ -25,9 +32,5 @@ module.exports = {
                 loader: 'style-loader!css-loader!sass-loader'
 			},
         ]
-    },
-    devServer: {
-        contentBase: path.resolve(__dirname, "dist"),
-        port: 3000
     }
 };

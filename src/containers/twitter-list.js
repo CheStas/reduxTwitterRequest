@@ -6,7 +6,7 @@ class TwitterList extends Component {
     renderList() {
         return this.props.twitters.map(twitt => {
             return (
-                <li key={twitt.title}>{twitt.title}</li>
+                <li key={twitt.id}>{twitt.text}</li>
             )
         })
     }
