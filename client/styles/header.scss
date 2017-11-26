@@ -1,0 +1,54 @@
+@keyframes transformRotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    15% {
+        transform: rotate(-15deg)
+    }
+    30% {
+        transform: rotate(-30deg)
+    }
+    45% {
+        transform: rotate(-15deg)
+    }
+    60% {
+        transform: rotate(0deg)
+    }
+    75% {
+        transform: rotate(15deg)
+    }
+    90% {
+        transform: rotate(30deg)
+    }
+    100% {
+        transform: rotate(15deg)
+    }
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    button {
+        width: 150px;
+        margin: 10px;
+        border: 0;
+        cursor: pointer;
+        img {
+            width: 50px;
+        }
+        &:hover {
+            img {
+                animation-name: transformRotate;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+    .button--red {
+        background-color: #e9141e
+    }
+    .button--blue {
+        background-color: #00aff3
+    }
+}

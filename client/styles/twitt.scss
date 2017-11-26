@@ -1,0 +1,87 @@
+.twittWrap {
+    width: 500px;
+    margin: 10px 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .retweeted {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        font-size: 12px;
+        color: #657786;
+        .linkToUser {
+            margin: 0 5px;
+        }
+    }
+    .icon {
+        width: 16px;
+    }
+    .linkToUser:hover {
+        color: #1B95E0;
+        text-decoration: underline;
+    }
+    .twittItem {
+        display: flex;
+        flex-flow: row nowrap;
+        .image {
+            padding: 5px;
+            img {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .mainSection {
+        .userSection {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            .name {
+                font-weight: 900;
+                color: #000;
+                font-size: 14px;
+            }
+            .icon {
+                margin: 0 5px;
+            }
+            .screenName,
+            .time {
+                margin-right: 5px;
+                font-size: 12px;
+                color: #657786;
+            }
+        }
+        .text {
+            display: block;
+            margin: 10px 0;
+        }
+        .footerSection {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            font-size: 12px;
+            color: #657786;
+            a {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: flex-end;
+                object {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .twittWrap {
+        width: 90%;
+        margin: 10px 10%;
+    }
+}

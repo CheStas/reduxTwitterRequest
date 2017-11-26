@@ -1,21 +1,16 @@
-const router = require('express').Router();
-const request = require('request');
-const bearer_token = 'AAAAAAAAAAAAAAAAAAAAAAq13AAAAAAACiMObO2Ouy42H%2B00yg9F3rZVlmU%3DwFyg8xRTJbEmOp1fuS27UFWEFUQGf3oa0DKunPrpsUdNcoKmqu';
+const router = require('express').Router(),
+    twitterService = require('../services/twitterService');
 
 router.get(`/:query`, (req, res) => {
-    console.log('works---');
-    twitterService(req.params.query, (err, body) => {
-        res.json(body);
+    twitterService.getTwittersByQuery(req.params.query, (err, body) => {
+        if (!err) {
+            res.data = body;
+            res.json(body);
+        } else {
+            res.status(400);
+            res.json(err);
+        }
     })
-    
 })
-
-function twitterService(query, cb) {
-    const url = `https://api.twitter.com/1.1/search/tweets.json?q=${query}`;
-    request({ headers: { "Authorization": "Bearer " + bearer_token } , uri: url}, (err, res, body) => {
-        console.log(body);
-        cb(err, body)
-    })
-}
 
 module.exports = router;

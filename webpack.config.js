@@ -1,12 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
     entry: [
         'webpack-hot-middleware/client',
-        './src/index.js'
+        './client/index.js'
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -17,20 +16,24 @@ module.exports = {
     ],
     module: {
         rules: [
-            { 
-                test: /\.js?$/, 
-                loader: 'babel-loader', 
+            {
+                test: /\.js?$/,
+                loader: 'babel-loader',
                 exclude: /node_modules/,
                 query:
                     {
-                        presets:['react']
+                        presets: ['react']
                     }
             },
             {
-				test: /\.scss$/,
-				include: path.join(__dirname, 'src'),
+                test: /\.scss$/,
+                include: path.join(__dirname, 'client'),
                 loader: 'style-loader!css-loader!sass-loader'
-			},
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use: 'url-loader'
+            },
         ]
     }
 };
