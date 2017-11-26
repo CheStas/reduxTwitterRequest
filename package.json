@@ -16,6 +16,9 @@
   "dependencies": {
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
     "body-parser": "^1.18.2",
     "eslint": "^4.11.0",
     "eslint-plugin-babel": "^4.1.2",
@@ -38,9 +41,6 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.2",
-    "babel-loader": "^7.1.2",
     "babel-plugin-react-transform": "^3.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-display-name": "^6.25.0",
