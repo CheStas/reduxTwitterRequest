@@ -5,11 +5,11 @@ import rootReducer from './reducers/index';
 
 const defaultState = {};
 const sagaMiddleware = createSagaMiddleware();
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
     rootReducer,
     defaultState,
-    composeEnhancers(applyMiddleware(sagaMiddleware))
+    applyMiddleware(sagaMiddleware)
 );
 
 sagaMiddleware.run(saga)
