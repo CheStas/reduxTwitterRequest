@@ -19,7 +19,7 @@ class TwitterList extends Component {
             <section className="twittersWrap">
                 {this.renderList()}
                 {
-                    this.props.twitters.collections.length > 0 && (
+                    this.props.twitters.nextPage && this.props.twitters.nextPage.length > 0 && (
                         <button className="button--loadMore" onClick={() => this.props.fetchMoreTwitters(this.props.twitters.nextPage)}>load more</button>
                     )
                 }
