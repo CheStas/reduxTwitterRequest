@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "58e31d507ff64815c93e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "230c12ec476fcce27767"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -24917,8 +24917,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAasAAAHNCAYAAACg
 
 const defaultState = {};
 const sagaMiddleware = Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga__["a" /* default */])();
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["d" /* createStore */])(__WEBPACK_IMPORTED_MODULE_3__reducers_index__["a" /* default */], defaultState, composeEnhancers(Object(__WEBPACK_IMPORTED_MODULE_0_redux__["a" /* applyMiddleware */])(sagaMiddleware)));
+const store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["d" /* createStore */])(__WEBPACK_IMPORTED_MODULE_3__reducers_index__["a" /* default */], defaultState, Object(__WEBPACK_IMPORTED_MODULE_0_redux__["a" /* applyMiddleware */])(sagaMiddleware));
 
 sagaMiddleware.run(__WEBPACK_IMPORTED_MODULE_2__sagas_sagas__["d" /* default */]);
 
