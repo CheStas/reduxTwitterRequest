@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6c10ef5a8982fab57534"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "58e31d507ff64815c93e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -22784,7 +22784,7 @@ class TwitterList extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             'section',
             { className: 'twittersWrap' },
             this.renderList(),
-            this.props.twitters.collections.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            this.props.twitters.nextPage && this.props.twitters.nextPage.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'button',
                 { className: 'button--loadMore', onClick: () => this.props.fetchMoreTwitters(this.props.twitters.nextPage) },
                 'load more'
